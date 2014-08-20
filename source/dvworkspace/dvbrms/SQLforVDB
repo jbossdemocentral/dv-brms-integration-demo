@@ -1,0 +1,4 @@
+// 1) Enter valid SQL query (i.e. SELECT * FROM FOO)
+// 2) Highlight query and right-click select "Execute Selected Text"
+
+SELECT CustomerID, CustomerName, CustomerCreditScore, CustomerCalls, CustomerSentiment FROM CustomerContext;

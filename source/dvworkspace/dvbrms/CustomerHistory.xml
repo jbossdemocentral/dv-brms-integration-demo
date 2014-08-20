@@ -1,0 +1,23 @@
+<CustomerHistory>
+	<CustomerData>
+		<CustomerID>123</CustomerID>
+		<Calls>2</Calls>
+		<Sentiment>Cold</Sentiment>
+	</CustomerData>
+	<CustomerData>
+		<CustomerID>456</CustomerID>
+		<Calls>7</Calls>
+		<Sentiment>Warm</Sentiment>
+	</CustomerData>
+	<CustomerData>
+		<CustomerID>789</CustomerID>
+		<Calls>2</Calls>
+		<Sentiment>Hot</Sentiment>
+	</CustomerData>
+	<CustomerData>
+		<CustomerID>654</CustomerID>
+		<Calls>4</Calls>
+		<Sentiment>Cold</Sentiment>
+	</CustomerData>
+</CustomerHistory>
+
