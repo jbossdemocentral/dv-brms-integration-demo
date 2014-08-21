@@ -2,12 +2,12 @@
 <AutomatedInstallation langpack="eng">
 <com.izforge.izpack.panels.HTMLLicencePanel id="HTMLLicencePanel"/>
 <com.izforge.izpack.panels.TargetPanel id="DirectoryPanel">
-<installpath>/home/kpeeples/demos/dv-install-script-demo/installed/dv</installpath>
+<installpath>target</installpath>
 </com.izforge.izpack.panels.TargetPanel>
 <com.izforge.izpack.panels.UserInputPanel id="security">
 <userInput>
-<entry key="adminPassword" value="2851c15b7f819875fdb05f0bd8666564"/>
-<entry key="adminUser" value="admin"/>
+<entry key="adminPassword" value="869bc9ed48261805a6fa8e96ac168471"/>
+<entry key="adminUser" value="erics"/>
 </userInput>
 </com.izforge.izpack.panels.UserInputPanel>
 <com.izforge.izpack.panels.MavenCheckPanel id="MavenSetup"/>

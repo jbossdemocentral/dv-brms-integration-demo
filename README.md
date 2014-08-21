@@ -1,19 +1,76 @@
-This integration multiproduct demonstration uses:  
--Data Virtualization 6.0  
--Business Rules Management System 6.0  
+JBoss BRMS & JBoss DV Integration Demo
+======================================
+This is a demo project to get you started with automatically installing two EAP instances, one with JBoss 
+BRMS product and the other with JBoss DV product configured and installed.
 
-Use Case Description: 
-Data-driven business decisions through a customer context  
-Objective-  
-Deteremine what offers or discounts can be offered to the customer according to the customer context  
-Problem-  
-Call center agents don't have easy access to all the data and the business rules are manual  
-Solution-  
-Use Data Virtualization to create a unified view for a custoemr context which can then be applied to business rules in BRMS to automatically determine the offers or discounts for the customer  
-  
+There will be various example projects the demonstrate some of the available scenarios around working with 
+the capabilities of these two product.
+
+
+Quickstart
+----------
+
+1. [Download and unzip.](https://github.com/kpeeples/dv-brms-integration-demo/archive/master.zip)
+
+2. Add products to installs directory.
+
+3. Run 'init.sh' or 'init.bat'.
+
+Follow the instructions on the screen to start JBoss BRMS server and JBoss DV server.
+
+   ```
+   Start JBoss BPM Suite server:                                                       
+                                                                                       
+     $ ./target/jboss-eap-6.1/bin/standalone.sh -Djboss.socket.binding.port-offset=100 
+                                                                                       
+   In seperate terminal start JBoss DV server:                                         
+                                                                                       
+     $ ./target/jboss-eap-6.1.dv/bin/standalone.sh                                     
+                                                                                       
+   Login to business central to build & deploy BRMS rules project at:                     
+                                                                                       
+     http://localhost:8180/business-central     (u:erics/p:bpmsuite1!)                    
+                                                                                       
+   As a developer you have an application project simulated as a unit test in             
+   projects/brmsquickstart/helloworld-brms which you can run with the maven command:      
+                                                                                       
+     $ mvn deploy -f projects/brmsquickstart/helloworld-brms/pom.xml                      
+                                                                                       
+   View the DV setup:                                                                     
+                                                                                       
+       (TODO: Kenny sort this out)                                                     
+
+   Login to http://localhost:8080         (u:erics / p:jbossbrms1!)
+
+   Note: JBoss DV user login (u:admin/p:jbossdv1!)
+
+   ```
+
+
+Coming soon:
+------------
+   
+   * more demo ideas?
+
+
+Supporting Articles
+-------------------
+None yet...
+
+
 Released versions
 -----------------
 
 See the tagged releases for the following versions of the product:
 
-- v1.0 Kenny initial setup for webinar.
+- v1.1 - JBoss BRMS 6.0.2, JBoss DV 6.0.0, and initial demo projects installed.
+
+- v1.0 - Kenny Peeples initial setup for webinar on this topic in July 2014.
+
+
+![Digital Sign Annoucement](https://github.com/eschabell/brms-coolstore-demo/blob/master/docs/demo-images/announce-sign.jpg?raw=true)
+
+![Decision Table](https://github.com/eschabell/brms-coolstore-demo/blob/master/docs/demo-images/coolstore-decision-table.png?raw=true)
+
+![Domain Model](https://github.com/eschabell/brms-coolstore-demo/blob/master/docs/demo-images/coolstore-model.png?raw=true)
+
