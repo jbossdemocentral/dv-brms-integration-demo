@@ -19,7 +19,7 @@ Quickstart
 Follow the instructions on the screen to start JBoss BRMS server and JBoss DV server.
 
    ```
-   Start JBoss BPM Suite server:                                                       
+   Start JBoss BRMS server:                                                       
                                                                                        
      $ ./target/jboss-eap-6.1/bin/standalone.sh -Djboss.socket.binding.port-offset=100 
                                                                                        
