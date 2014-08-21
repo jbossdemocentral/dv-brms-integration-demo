@@ -11,4 +11,9 @@ Call center agents don't have easy access to all the data and the business rules
 Solution-  
 Use Data Virtualization to create a unified view for a custoemr context which can then be applied to business rules in BRMS to automatically determine the offers or discounts for the customer  
   
-  
+Released versions
+-----------------
+
+See the tagged releases for the following versions of the product:
+
+- v1.0 Kenny initial setup for webinar.
