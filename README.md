@@ -68,9 +68,5 @@ See the tagged releases for the following versions of the product:
 - v1.0 - Kenny Peeples initial setup for webinar on this topic in July 2014.
 
 
-![Digital Sign Annoucement](https://github.com/eschabell/brms-coolstore-demo/blob/master/docs/demo-images/announce-sign.jpg?raw=true)
-
-![Decision Table](https://github.com/eschabell/brms-coolstore-demo/blob/master/docs/demo-images/coolstore-decision-table.png?raw=true)
-
-![Domain Model](https://github.com/eschabell/brms-coolstore-demo/blob/master/docs/demo-images/coolstore-model.png?raw=true)
+![Install](https://github.com/kpeeples/dv-brms-integration-demo/blob/master/docs/demo-images/install-console.png?raw=true)
 
