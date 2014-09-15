@@ -73,6 +73,8 @@ if [ -x $JBOSS_HOME ]; then
 		rm -rf ./target
 fi
 
+pause "start DV install"
+
 # Run DV installer.
 echo Product installer running now...
 echo
@@ -82,7 +84,23 @@ mv $JBOSS_HOME $JBOSS_HOME_DV
 echo
 echo "  - install teiid security files..."
 echo
-cp $SUPPORT_DIR/teiid* $SERVER_CONF_DV
+cp $SUPPORT_DIR/teiidfiles/teiid* $SERVER_CONF_DV
+
+echo
+echo "  - move data files..."
+echo
+cp -R $SUPPORT_DIR/teiidfiles/data $JBOSS_HOME_DV/teiidfiles/data
+
+echo
+echo "  - move virtual database..."
+echo
+cp -R $SUPPORT_DIR/teiidfiles/vdb $JBOSS_HOME_DV/standalone/deployments
+
+echo "  - setting up dv standalone.xml configuration adjustments..."
+echo
+cp $SUPPORT_DIR/teiidfiles/standalone.dv.xml $SERVER_CONF_DV/standalone.xml
+
+pause "start BRMS install"
 
 # Run BRMS installer.
 echo Product installer running now...

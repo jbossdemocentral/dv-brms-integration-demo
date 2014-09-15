@@ -36,16 +36,32 @@ Follow the instructions on the screen to start JBoss BRMS server and JBoss DV se
                                                                                        
      $ mvn deploy -f projects/brmsquickstart/helloworld-brms/pom.xml                      
                                                                                        
-   View the DV setup:                                                                     
+   View the Virtual Database Project:                                                                     
                                                                                        
-       (TODO: Kenny sort this out)                                                     
+       Import the DV project into JBDS with the Teiid tools installed.  See the How to guide for more detail. The Virtual Database and data is installed during the init.sh script.                                                       
 
-   Login to http://localhost:8080         (u:erics / p:jbossbrms1!)
+   Login to 
+      DV JBoss Management: http://localhost:8080         (u:admin / p:redhat1!)
+      DV Dashboard: http://localhost:8080/dashboard	(u: user / p:user)
+      BRMS JBoss Management: http://localhost:8180         (u:erics / p:jbossbrms1!)
+      BRMS Business Central: http://localhost:8180/business-central	(u: erics / p:jbossbrms1!)
 
-   Note: JBoss DV user login (u:admin/p:jbossdv1!)
 
    ```
 
+Use Cases
+------------
+Use Case 1
+Objective- 
+Deteremine what offers or discounts can be offered to the customer according to the customer context 
+Problem- 
+Call center agents don't have easy access to all the data and the business rules are manual 
+Solution- 
+Use Data Virtualization to create a unified view for a custoemr context which can then be applied to business rules in BRMS to automatically determine the offers or discounts for the customer 
+Description:
+Data Driven Business Decisions Made easy.  The objective is to determine what offers or discounts can be offered to the customer according tot he customer context.  The problem is the call center agents don't have easy access to all the data and the business rules are manual.  The solution is to use DV to create a unified view for a customer context which can then be applied to business rules in BRMS to automatically determine the offers or discounts for the customer.
+Customer 1 Tom BAD Smith with 450 Credit Score, Cold Sentiment, 2 calls. Customer 2 Bryan VIP Jacobs with 750 Credit score, Warm Sentiment, 7 calls. Customer 3 Michelle VIP Ramos with 650 credit score, hot sentiment, 2 calls. Customer 4 750 credit score, cold sentiment, 4 calls.
+Rule BadCustomerSale when the customer type is bad then sale is denied. Rule RegularSale when the customer type is regular the sale is approved.  Rule VipDiscount when the customer type is VIP then the discount is .5 and sale is approved.
 
 Coming soon:
 ------------
@@ -55,8 +71,9 @@ Coming soon:
 
 Supporting Articles
 -------------------
-None yet...
-
+How to guide for more detail on install to run the demo and to recreate from scratch in process with 3 videos - Part 1 Setup/Configuration, Part 2 Build/deploy, Part 3 Run.
+DV - Example of two federating two datasources - https://developer.jboss.org/docs/DOC-18404
+BRMS - A basic BRMS quickstart - http://www.jboss.org/quickstarts/brms/helloworld-brms/
 
 Released versions
 -----------------

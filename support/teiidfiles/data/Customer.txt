@@ -1,0 +1,5 @@
+CustomerID,CustomerName,CustomerCreditScore
+123,Tom BAD Smith,450
+456,Bryan VIP Jacobs,750
+789,Michelle VIP Ramos,650
+654,Tina REGULAR Romney,705

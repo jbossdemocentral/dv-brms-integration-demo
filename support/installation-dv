@@ -6,8 +6,8 @@
 </com.izforge.izpack.panels.TargetPanel>
 <com.izforge.izpack.panels.UserInputPanel id="security">
 <userInput>
-<entry key="adminPassword" value="869bc9ed48261805a6fa8e96ac168471"/>
-<entry key="adminUser" value="erics"/>
+<entry key="adminPassword" value="2851c15b7f819875fdb05f0bd8666564"/>
+<entry key="adminUser" value="admin"/>
 </userInput>
 </com.izforge.izpack.panels.UserInputPanel>
 <com.izforge.izpack.panels.MavenCheckPanel id="MavenSetup"/>
