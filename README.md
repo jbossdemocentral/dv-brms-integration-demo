@@ -6,6 +6,8 @@ BRMS product and the other with JBoss DV product configured and installed.
 There will be various example projects the demonstrate some of the available scenarios around working with 
 the capabilities of these two product.
 
+![Install](https://github.com/kpeeples/dv-brms-integration-demo/blob/master/docs/demo-images/dv+brms+image1.JPG?raw=true)
+
 
 Quickstart
 ----------
