@@ -73,13 +73,18 @@ if [ -x $JBOSS_HOME ]; then
 		rm -rf ./target
 fi
 
-pause "start DV install"
+read -p "Starting DV Install <hit return or wait 5 seconds>" -t 5
+echo
 
 # Run DV installer.
 echo Product installer running now...
 echo
+
 java -jar $SRC_DIR/$DV $SUPPORT_DIR/installation-dv 
 mv $JBOSS_HOME $JBOSS_HOME_DV
+
+read -p "Post DV install configuration <hit return or wait 5 seconds>" -t 5
+echo
 
 echo
 echo "  - install teiid security files..."
@@ -89,7 +94,7 @@ cp $SUPPORT_DIR/teiidfiles/teiid* $SERVER_CONF_DV
 echo
 echo "  - move data files..."
 echo
-cp -R $SUPPORT_DIR/teiidfiles/data $JBOSS_HOME_DV/teiidfiles/data
+cp -R $SUPPORT_DIR/teiidfiles/data/* $JBOSS_HOME_DV/standalone/data
 
 echo
 echo "  - move virtual database..."
@@ -100,12 +105,21 @@ echo "  - setting up dv standalone.xml configuration adjustments..."
 echo
 cp $SUPPORT_DIR/teiidfiles/standalone.dv.xml $SERVER_CONF_DV/standalone.xml
 
-pause "start BRMS install"
+read -p "Starting BRMS Install <hit return or wait 5 seconds>" -t 5
+echo
 
 # Run BRMS installer.
 echo Product installer running now...
 echo
 java -jar $SRC_DIR/$BRMS $SUPPORT_DIR/installation-brms -variablefile $SUPPORT_DIR/installation-brms.variables
+
+read -p "Post BRMS install configuration <hit return or wait 5 seconds>" -t 5
+echo
+
+# Setup quickstart user
+echo Setup quickstart user now...
+echo
+$JBOSS_HOME/bin/add-user.sh -a -u 'quickstartUser' -p 'quickstartPwd1!' -ro 'admin,analyst'
 
 #echo "  - setting up demo projects..."
 #echo
@@ -137,7 +151,7 @@ echo "=  ******** APP LEVERAGES DV DATA SOURCES WITH BRMS RULES SCENARIO *******
 echo "=                                                                                         =" 
 echo "=  Login to business central to build & deploy BRMS rules project at:                     ="
 echo "=                                                                                         =" 
-echo "=    http://localhost:8180/business-central     (u:erics/p:bpmsuite1!)                    ="
+echo "=    http://localhost:8180/business-central     (u:ericsquikstartUser/p:quickstartPwd1!)  ="
 echo "=                                                                                         =" 
 echo "=  As a developer you have an application project simulated as a unit test in             ="
 echo "=  projects/brmsquickstart/helloworld-brms which you can run with the maven command:      ="

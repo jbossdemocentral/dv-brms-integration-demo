@@ -305,7 +305,7 @@
                     <connection-definitions>
                         <connection-definition class-name="org.teiid.resource.adapter.file.FileManagedConnectionFactory" jndi-name="java:/CustomerFlatFileSourceModel" enabled="true" pool-name="CustomerFlatFileSourceModel">
                             <config-property name="ParentDirectory">
-                                ${jboss.home.dir}/teiidfiles/data/
+                                ${jboss.home.dir}/standalone/data/
                             </config-property>
                         </connection-definition>
                     </connection-definitions>
@@ -316,7 +316,7 @@
                     <connection-definitions>
                         <connection-definition class-name="org.teiid.resource.adapter.file.FileManagedConnectionFactory" jndi-name="java:/CustomerHistoryXMLFileSourceModel" enabled="true" pool-name="CustomerHistoryXMLFileSourceModel">
                             <config-property name="ParentDirectory">
-                                ${jboss.home.dir}/teiidfiles/data/
+                                ${jboss.home.dir}/standalone/data/
                             </config-property>
                         </connection-definition>
                     </connection-definitions>

@@ -29,12 +29,40 @@ Follow the instructions on the screen to start JBoss BRMS server and JBoss DV se
                                                                                        
    Login to business central to build & deploy BRMS rules project at:                     
                                                                                        
-     http://localhost:8180/business-central     (u:erics/p:bpmsuite1!)                    
+     http://localhost:8180/business-central     (u:quickstartUser/p:quickstartUser1!)                      
                                                                                        
+     First Import the BRMS Repository  
+     -Log in with the following credentials:  
+         Username: quickstartUser  
+         Password: quickstartPwd1!  
+    -Choose menu option `Authoring` -> `Administration`  
+    -Choose sub-menu option `Repositories` -> `Clone repository`  
+    -Complete the form as follows:  
+         Repository Name:      jboss-brms-repository  
+         Organizational Unit:  example  
+            either  
+         Git URL:              file://path/to/jboss-brms-repository  
+            or  
+         Git URL:              https://github.com/jboss-developer/jboss-brms-repository.git  
+         User Name:            <leave blank>  
+         Password:             <leave blank>  
+    -Click the `Clone` button to create the repository. You see the message "The repository is cloned successfully".        
+    Second Deploy BRMS kmodule  
+    -Choose menu option `Authoring` -> `Project Authoring`  
+    -Choose the following options under `Project Explorer`:  
+        Organizational Unit:  example  
+        Repository Name:      jboss-brms-repository  
+        BRMS Kmodule:         helloworld-brms-kmodule  
+    -Next, click on `Tools` and `Project Editor`  
+    -In the tab on the right, click on `Build & Deploy`.   
+      * It will prompt you with a message: "Also save possible changes to project?". Click `Yes`.  
+      * You are prompted for a comment. Add a comment and click on `Save` button.  
+    -This deploys the `org.jboss.quickstarts.brms:helloworld-brms-kmodule:1.0.0` artifact to the BRMS Maven repository. You can verify the deployment choosing menu option `Deployment` --> `Artifact Repository`.  
+
    As a developer you have an application project simulated as a unit test in             
    projects/brmsquickstart/helloworld-brms which you can run with the maven command:      
                                                                                        
-     $ mvn deploy -f projects/brmsquickstart/helloworld-brms/pom.xml                      
+     $ mvn clean test -f projects/brmsquickstart/helloworld-brms/pom.xml -s quickstartsettings.xml -Penable-test,brms                        
                                                                                        
    View the Virtual Database Project:                                                                     
                                                                                        
