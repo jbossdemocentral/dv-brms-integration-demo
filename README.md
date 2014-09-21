@@ -95,6 +95,8 @@ Data Driven Business Decisions Made easy.
 Customer 1 Tom BAD Smith with 450 Credit Score, Cold Sentiment, 2 calls. Customer 2 Bryan VIP Jacobs with 750 Credit score, Warm Sentiment, 7 calls. Customer 3 Michelle VIP Ramos with 650 credit score, hot sentiment, 2 calls. Customer 4 750 credit score, cold sentiment, 4 calls.
 Rule BadCustomerSale when the customer type is bad then sale is denied. Rule RegularSale when the customer type is regular the sale is approved.  Rule VipDiscount when the customer type is VIP then the discount is .5 and sale is approved.
 
+![Use Case Overview](https://github.com/kpeeples/dv-brms-integration-demo/blob/master/docs/demo-images/dv%2Bbrms-image3.JPG)
+
 Coming soon:
 ------------
    
