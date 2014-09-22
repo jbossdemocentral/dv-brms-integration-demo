@@ -81,19 +81,16 @@ Follow the instructions on the screen to start JBoss BRMS server and JBoss DV se
 
    ```
 
-Use Cases  
+Use Cases 1 
 ------------  
-Use Case 1  
-Objective-   
+*Objective*   
 Deteremine what offers or discounts can be offered to the customer according to the customer context   
-Problem-   
+*Problem*   
 Call center agents don't have easy access to all the data and the business rules are manual   
-Solution-   
+*Solution*   
 Use Data Virtualization to create a unified view for a custoemr context which can then be applied to business rules in BRMS to automatically determine the offers or discounts for the customer   
-Description:  
+^Description:^  
 Data Driven Business Decisions Made easy.  
-Customer 1 Tom BAD Smith with 450 Credit Score, Cold Sentiment, 2 calls. Customer 2 Bryan VIP Jacobs with 750 Credit score, Warm Sentiment, 7 calls. Customer 3 Michelle VIP Ramos with 650 credit score, hot sentiment, 2 calls. Customer 4 750 credit score, cold sentiment, 4 calls.
-Rule BadCustomerSale when the customer type is bad then sale is denied. Rule RegularSale when the customer type is regular the sale is approved.  Rule VipDiscount when the customer type is VIP then the discount is .5 and sale is approved.
 
 ![Use Case Overview](https://github.com/kpeeples/dv-brms-integration-demo/blob/master/docs/demo-images/dv%2Bbrms-image4.JPG)
 
