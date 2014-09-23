@@ -160,10 +160,9 @@ echo "=    $ mvn deploy -f projects/brmsquickstart/helloworld-brms/pom.xml      
 echo "=                                                                                         =" 
 echo "=  View the DV setup:                                                                     ="
 echo "=                                                                                         ="
-echo "=         (TODO: Kenny sort this out)                                                     ="
+echo "=  Refer to the how to guide and videos for specific setup                                ="
 echo "=                                                                                         ="
-echo "=                                                                                         ="
-echo "=   $DEMO Setup Complete.                                ="
+echo "=   $DEMO Setup Complete.                                                                 ="
 echo "=                                                                                         ="
 echo "==========================================================================================="
 echo

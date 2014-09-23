@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite failures="0" time="0.035" errors="0" skipped="0" tests="3" name="org.jboss.quickstarts.brms.HelloWorldBRMSTest">
+<testsuite failures="0" time="0.012" errors="0" skipped="0" tests="3" name="org.jboss.quickstarts.brms.HelloWorldBRMSTest">
   <properties>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
     <property name="sun.boot.library.path" value="/usr/lib/jvm/java-1.7.0-openjdk-1.7.0.60-2.4.7.4.fc20.x86_64/jre/lib/amd64"/>
@@ -7,7 +7,6 @@
     <property name="java.vm.vendor" value="Oracle Corporation"/>
     <property name="java.vendor.url" value="http://java.oracle.com/"/>
     <property name="path.separator" value=":"/>
-    <property name="java.rmi.server.randomIDs" value="true"/>
     <property name="guice.disable.misplaced.annotation.check" value="true"/>
     <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
     <property name="file.encoding.pkg" value="sun.io"/>
@@ -59,7 +58,7 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase time="0.022" classname="org.jboss.quickstarts.brms.HelloWorldBRMSTest" name="testGoodCustomer"/>
-  <testcase time="0.011" classname="org.jboss.quickstarts.brms.HelloWorldBRMSTest" name="testRegularCustomer"/>
-  <testcase time="0.002" classname="org.jboss.quickstarts.brms.HelloWorldBRMSTest" name="testBadCustomer"/>
+  <testcase time="0.012" classname="org.jboss.quickstarts.brms.HelloWorldBRMSTest" name="testGoodCustomer"/>
+  <testcase time="0" classname="org.jboss.quickstarts.brms.HelloWorldBRMSTest" name="testRegularCustomer"/>
+  <testcase time="0" classname="org.jboss.quickstarts.brms.HelloWorldBRMSTest" name="testBadCustomer"/>
 </testsuite>
