@@ -103,10 +103,10 @@ Coming soon:
 Supporting Articles
 -------------------
 How to guide for more detail on install to run the demo and to recreate from scratch  
-Part 1 DV and BRMS Overview - http://vimeo.com/user16928011/dv-brms-integrated-demo-part1  
-Part 2 Setup/Configuration   
-Part 3 Build/deploy   
-Part 4 Run   
+Part 1 Overview http://vimeo.com/user16928011/dv-brms-integrated-demo-part1  
+Part 2 Configuration/Deploy http://vimeo.com/user16928011/dv-brms-integrated-demo-part2  
+Part 3 Build/Deploy http://vimeo.com/user16928011/dv-brms-integrated-demo-part3  
+Part 4 Run - http://vimeo.com/user16928011/dv-brms-integrated-demo-part4  
 
 DV - Example of two federating two datasources - https://developer.jboss.org/docs/DOC-18404  
 BRMS - A basic BRMS quickstart - http://www.jboss.org/quickstarts/brms/helloworld-brms/  
