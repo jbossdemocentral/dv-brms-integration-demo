@@ -75,14 +75,6 @@ Data Driven Business Decisions Made easy.
 Supporting Articles
 -------------------
 
-[![Part 1 Overview](docs/demo-images/video1.png)](http://vimeo.com/user16928011/dv-brms-integrated-demo-part1)
-
-[![Part 2 Configuration/Deploy](docs/demo-images/video2.png)](http://vimeo.com/user16928011/dv-brms-integrated-demo-part2)
-
-[![Part 3 Build/Deploy](docs/demo-images/video3.png)](http://vimeo.com/user16928011/dv-brms-integrated-demo-part3) 
-
-[![Part 4 Run](docs/demo-images/video4.png)](http://vimeo.com/user16928011/dv-brms-integrated-demo-part4) 
-
 [DV - Example of two federated datasources](https://developer.jboss.org/docs/DOC-18404)
 
 [BRMS - A basic JBoss BRMS quickstart](http://www.jboss.org/quickstarts/brms/helloworld-brms) 
@@ -100,5 +92,11 @@ See the tagged releases for the following versions of the product:
 - v1.0 - Kenny Peeples initial setup for webinar on this topic in July 2014.
 
 
-![Install](https://github.com/kpeeples/dv-brms-integration-demo/blob/master/docs/demo-images/install-console.png?raw=true)
+[![Part 1 Overview](docs/demo-images/video1.png)](http://vimeo.com/user16928011/dv-brms-integrated-demo-part1)
+
+[![Part 2 Configuration/Deploy](docs/demo-images/video2.png)](http://vimeo.com/user16928011/dv-brms-integrated-demo-part2)
+
+[![Part 3 Build/Deploy](docs/demo-images/video3.png)](http://vimeo.com/user16928011/dv-brms-integrated-demo-part3) 
+
+[![Part 4 Run](docs/demo-images/video4.png)](http://vimeo.com/user16928011/dv-brms-integrated-demo-part4) 
 
