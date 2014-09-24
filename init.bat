@@ -16,9 +16,9 @@ set SERVER_CONF_DV=%JBOSS_HOME_DV%\standalone\configuration\
 set SRC_DIR=%PROJECT_HOME%installs
 set SUPPORT_DIR=%PROJECT_HOME%support
 set PRJ_DIR=%PROJECT_HOME%projects
-set BRMS=jboss-brms-installer-6.0.2.GA-redhat-5.jar
+set BRMS=jboss-brms-installer-6.0.3.GA-redhat-1.jar
 set DV=jboss-dv-installer-6.0.0.GA-redhat-4.jar
-set BRMS_VERSION=6.0.2
+set BRMS_VERSION=6.0.3
 set DV_VERSION=6.0.0
 
 REM wipe screen.
@@ -91,10 +91,34 @@ echo   - install teiid security files...
 echo.
 xcopy /Y /Q "%SUPPORT_DIR%\teiid*" "%SERVER_CONF_DV%"
 
+echo.
+echo   - move data files...
+echo.
+xcopy /Y /Q "%SUPPORT_DIR%\teiidfiles\data\*" "%JBOSS_HOME_DV%\standalone\data"
+
+echo.
+echo   - move virtual database...
+echo.
+xcopy /Y /Q "%SUPPORT_DIR%\teiidfiles\vdb" "%JBOSS_HOME_DV%\standalone\deployments"
+
+echo   - setting up dv standalone.xml configuration adjustments...
+echo
+xcopy /Y /Q "%SUPPORT_DIR%\teiidfiles\standalone.dv.xml" "%SERVER_CONF_DV%\standalone.xml"
+
 REM Run BRMS installer.
 echo Product installer running now...
 echo.
 call java -jar %SRC_DIR%\%BRMS% %SUPPORT_DIR%\installation-brms -variablefile %SUPPORT_DIR%\installation-brms.variables
+
+echo.
+echo   - setting up demo projects...
+echo.
+xcopy /Y /Q "%SUPPORT_DIR%\bpm-suite-demo-niogit" "%SERVER_BIN%\.niogit"
+
+echo.
+echo   - setting up roles adjustments...
+echo.
+xcopy /Y /Q "%SUPPORT_DIR%\application-roles.properties" "%SERVER_CONF%"
 
 echo.
 echo   - setting up standalone.xml configuration adjustments...
@@ -107,28 +131,30 @@ echo ===========================================================================
 echo =                                                                            = 
 echo =  Start JBoss BPM Suite server:                                             =
 echo =                                                                            = 
-echo =    %SERVER_BIN%\standalone.bat -Djboss.socket.binding.port-offset=100    
+echo =    %SERVER_BIN%\standalone.bat -Djboss.socket.binding.port-offset=100    =
 echo =                                                                            = 
 echo =  In seperate terminal start JBoss DV server:                               =
 echo =                                                                            = 
-echo =    %SERVER_BIN_DV%\standalone.bat                                        
+echo =    %SERVER_BIN_DV%\standalone.bat                                          =
 echo =                                                                            = 
 echo =                                                                            = 
 echo =  ******* APP LEVERAGES DV DATA SOURCES WITH BRMS RULES SCENARIO ********   =
 echo =                                                                            = 
-echo =  Login to business central to build ^& deploy BRMS rules project at:        =
+echo =  Login to business central to build ^& deploy BRMS rules project at:       =
 echo =                                                                            = 
-echo =    http://localhost:8180/business-central     (u:erics/p:bpmsuite1!)       =
+echo =    http://localhost:8180/business-central                                  =
+echo =                    user: quickstartUser / password: quickstartPwd1!        =
 echo =                                                                            = 
 echo =  As a developer you have an application project simulated as a unit test   =
 echo =  in projects/brmsquickstart/helloworld-brms which you can run with the     =
 echo =  maven command:                                                            =
 echo =                                                                            = 
-echo =    mvn deploy -f projects/brmsquickstart/helloworld-brms/pom.xml           =
+echo =    mvn clean test -f projects/brmsquickstart/helloworld-brms/pom.xml       =
+echo =                            -s quickstartsettings.xml -Penable-test,brms    =
 echo =                                                                            = 
 echo =  View the DV setup:                                                        =
 echo =                                                                            =
-echo =         (TODO: Kenny sort this out)                                        =
+echo =    Refer to the how to guide and videos for specific setup.                =
 echo =                                                                            =
 echo =                                                                            =
 echo =   %DEMO% Setup Complete.                                              =

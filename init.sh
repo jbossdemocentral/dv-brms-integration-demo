@@ -104,6 +104,7 @@ echo Product installer running now...
 echo
 java -jar $SRC_DIR/$BRMS $SUPPORT_DIR/installation-brms -variablefile $SUPPORT_DIR/installation-brms.variables
 
+echo
 echo "  - setting up demo projects..."
 echo
 cp -r $SUPPORT_DIR/bpm-suite-demo-niogit $SERVER_BIN/.niogit
@@ -144,7 +145,7 @@ echo "=                                                                         
 echo "=  As a developer you have an application project simulated as a unit test in             ="
 echo "=  projects/brmsquickstart/helloworld-brms which you can run with the maven command:      ="
 echo "=                                                                                         =" 
-echo "=    $ mvn clearn test -f projects/brmsquickstart/helloworld-brms/pom.xml                 ="
+echo "=    $ mvn clean test -f projects/brmsquickstart/helloworld-brms/pom.xml                  ="
 echo "=                                     -s quickstartsettings.xml -Penable-test,brms        ="
 echo "=                                                                                         =" 
 echo "=  View the DV setup:                                                                     ="
