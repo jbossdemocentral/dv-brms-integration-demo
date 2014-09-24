@@ -6,13 +6,13 @@
 </com.izforge.izpack.panels.TargetPanel>
 <com.izforge.izpack.panels.UserInputPanel id="security">
 <userInput>
+<entry key="adminUser" value="quickstartUser"/>
 <entry autoPrompt="true" key="adminPassword"/>
-<entry key="adminUser" value="erics"/>
 </userInput>
 </com.izforge.izpack.panels.UserInputPanel>
 <com.izforge.izpack.panels.UserInputPanel id="brmsUser">
 <userInput>
-<entry key="brms.user" value="erics"/>
+<entry key="brms.user" value="quickstartUser"/>
 <entry autoPrompt="true" key="brms.password"/>
 </userInput>
 </com.izforge.izpack.panels.UserInputPanel>

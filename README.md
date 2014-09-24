@@ -31,90 +31,69 @@ Follow the instructions on the screen to start JBoss BRMS server and JBoss DV se
                                                                                        
    Login to business central to build & deploy BRMS rules project at:                     
                                                                                        
-     http://localhost:8180/business-central     (u:quickstartUser/p:quickstartUser1!)                      
+     http://localhost:8180/business-central     (u:quickstartUser/p:quickstartPwd1!)                      
                                                                                        
-     First Import the BRMS Repository  
-     -Log in with the following credentials:  
-         Username: quickstartUser  
-         Password: quickstartPwd1!  
-    -Choose menu option `Authoring` -> `Administration`  
-    -Choose sub-menu option `Repositories` -> `Clone repository`  
-    -Complete the form as follows:  
-         Repository Name:      jboss-brms-repository  
-         Organizational Unit:  example  
-            either  
-         Git URL:              file://path/to/jboss-brms-repository  
-            or  
-         Git URL:              https://github.com/jboss-developer/jboss-brms-repository.git  
-         User Name:            <leave blank>  
-         Password:             <leave blank>  
-    -Click the `Clone` button to create the repository. You see the message "The repository is cloned successfully".        
-    Second Deploy BRMS kmodule  
-    -Choose menu option `Authoring` -> `Project Authoring`  
-    -Choose the following options under `Project Explorer`:  
-        Organizational Unit:  example  
-        Repository Name:      jboss-brms-repository  
-        BRMS Kmodule:         helloworld-brms-kmodule  
-    -Next, click on `Tools` and `Project Editor`  
-    -In the tab on the right, click on `Build & Deploy`.   
-      * It will prompt you with a message: "Also save possible changes to project?". Click `Yes`.  
-      * You are prompted for a comment. Add a comment and click on `Save` button.  
-    -This deploys the `org.jboss.quickstarts.brms:helloworld-brms-kmodule:1.0.0` artifact to the BRMS Maven repository. You can verify the deployment choosing menu option `Deployment` --> `Artifact Repository`.  
+   Build & Deploy JBoss BRMS project:
+
+     `Authoring` -> `Project Authoring` -> `Tools` -> `Project Editor` -> click on `Build & Deploy`.   
 
    As a developer you have an application project simulated as a unit test in             
    projects/brmsquickstart/helloworld-brms which you can run with the maven command:      
                                                                                        
-     $ mvn clean test -f projects/brmsquickstart/helloworld-brms/pom.xml -s quickstartsettings.xml -Penable-test,brms                        
+     $ mvn clean test -f projects/brmsquickstart/helloworld-brms/pom.xml -s support/quickstartsettings.xml -Penable-test,brms                        
                                                                                        
    View the Virtual Database Project:                                                                     
                                                                                        
-       Import the DV project into JBDS with the Teiid tools installed.  
-       See the How to guide for more detail.  
-       The Virtual Database and data is installed during the init.sh script.                                                       
+     Import the DV project into JBDS with the Teiid tools installed.  
 
-   Login to 
-      DV JBoss Management: http://localhost:8080         (u:admin / p:redhat1!)  
-      DV Dashboard: http://localhost:8080/dashboard	(u: user / p:user)  
-      BRMS JBoss Management: http://localhost:8180         (u:erics / p:jbossbrms1!)  
-      BRMS Business Central: http://localhost:8180/business-central	(u: erics / p:jbossbrms1!)  
-
-
+     See the How to guide for more detail.  
    ```
 
-Use Cases 1 
-------------  
+
+Use Case 1 
+----------  
+
 **Objective**   
+
 Deteremine what offers or discounts can be offered to the customer according to the customer context   
+
 **Problem**   
+
 Call center agents don't have easy access to all the data and the business rules are manual   
+
 **Solution**   
+
 Use Data Virtualization to create a unified view for a custoemr context which can then be applied to business rules in BRMS to automatically determine the offers or discounts for the customer   
+
 **Description:**  
+
 Data Driven Business Decisions Made easy.  
 
 ![Use Case Overview](https://github.com/kpeeples/dv-brms-integration-demo/blob/master/docs/demo-images/dv%2Bbrms-image4.JPG)
 
-Coming soon:
-------------
-   
-   * more demo ideas?
-
 
 Supporting Articles
 -------------------
-How to guide for more detail on install to run the demo and to recreate from scratch  
-Part 1 Overview http://vimeo.com/user16928011/dv-brms-integrated-demo-part1  
-Part 2 Configuration/Deploy http://vimeo.com/user16928011/dv-brms-integrated-demo-part2  
-Part 3 Build/Deploy http://vimeo.com/user16928011/dv-brms-integrated-demo-part3  
-Part 4 Run - http://vimeo.com/user16928011/dv-brms-integrated-demo-part4  
 
-DV - Example of two federating two datasources - https://developer.jboss.org/docs/DOC-18404  
-BRMS - A basic BRMS quickstart - http://www.jboss.org/quickstarts/brms/helloworld-brms/  
+![Part 1 Overview](http://vimeo.com/user16928011/dv-brms-integrated-demo-part1)
+
+![Part 2 Configuration/Deploy](http://vimeo.com/user16928011/dv-brms-integrated-demo-part2)
+
+![Part 3 Build/Deploy](http://vimeo.com/user16928011/dv-brms-integrated-demo-part3) 
+
+![Part 4 Run](http://vimeo.com/user16928011/dv-brms-integrated-demo-part4) 
+
+![DV - Example of two federated datasources](https://developer.jboss.org/docs/DOC-18404)
+
+![BRMS - A basic JBoss BRMS quickstart](http://www.jboss.org/quickstarts/brms/helloworld-brms) 
+
 
 Released versions
 -----------------
 
 See the tagged releases for the following versions of the product:
+
+- v1.2 - JBoss BRMS 6.0.3, JBoss DV 6.0.0, and initial demo projects installed.
 
 - v1.1 - JBoss BRMS 6.0.2, JBoss DV 6.0.0, and initial demo projects installed.
 

@@ -13,9 +13,9 @@ SERVER_CONF_DV=$JBOSS_HOME_DV/standalone/configuration/
 SRC_DIR=./installs
 SUPPORT_DIR=./support
 PRJ_DIR=./projects
-BRMS=jboss-brms-installer-6.0.2.GA-redhat-5.jar
+BRMS=jboss-brms-installer-6.0.3.GA-redhat-1.jar
 DV=jboss-dv-installer-6.0.0.GA-redhat-4.jar
-BRMS_VERSION=6.0.2
+BRMS_VERSION=6.0.3
 DV_VERSION=6.0.0
 
 # wipe screen.
@@ -73,18 +73,12 @@ if [ -x $JBOSS_HOME ]; then
 		rm -rf ./target
 fi
 
-read -p "Starting DV Install <hit return or wait 5 seconds>" -t 5
-echo
-
 # Run DV installer.
 echo Product installer running now...
 echo
 
 java -jar $SRC_DIR/$DV $SUPPORT_DIR/installation-dv 
 mv $JBOSS_HOME $JBOSS_HOME_DV
-
-read -p "Post DV install configuration <hit return or wait 5 seconds>" -t 5
-echo
 
 echo
 echo "  - install teiid security files..."
@@ -105,25 +99,19 @@ echo "  - setting up dv standalone.xml configuration adjustments..."
 echo
 cp $SUPPORT_DIR/teiidfiles/standalone.dv.xml $SERVER_CONF_DV/standalone.xml
 
-read -p "Starting BRMS Install <hit return or wait 5 seconds>" -t 5
-echo
-
 # Run BRMS installer.
 echo Product installer running now...
 echo
 java -jar $SRC_DIR/$BRMS $SUPPORT_DIR/installation-brms -variablefile $SUPPORT_DIR/installation-brms.variables
 
-read -p "Post BRMS install configuration <hit return or wait 5 seconds>" -t 5
+echo "  - setting up demo projects..."
 echo
+cp -r $SUPPORT_DIR/bpm-suite-demo-niogit $SERVER_BIN/.niogit
 
-# Setup quickstart user
-echo Setup quickstart user now...
 echo
-$JBOSS_HOME/bin/add-user.sh -a -u 'quickstartUser' -p 'quickstartPwd1!' -ro 'admin,analyst'
-
-#echo "  - setting up demo projects..."
-#echo
-#cp -r $SUPPORT_DIR/bpm-suite-demo-niogit $SERVER_BIN/.niogit
+echo "  - setting up roles adjustments..."
+echo
+cp $SUPPORT_DIR/application-roles.properties $SERVER_CONF
 
 echo "  - setting up standalone.xml configuration adjustments..."
 echo
@@ -151,18 +139,19 @@ echo "=  ******** APP LEVERAGES DV DATA SOURCES WITH BRMS RULES SCENARIO *******
 echo "=                                                                                         =" 
 echo "=  Login to business central to build & deploy BRMS rules project at:                     ="
 echo "=                                                                                         =" 
-echo "=    http://localhost:8180/business-central     (u:ericsquikstartUser/p:quickstartPwd1!)  ="
+echo "=    http://localhost:8180/business-central     (u:quickstartUser/p:quickstartPwd1!)      ="
 echo "=                                                                                         =" 
 echo "=  As a developer you have an application project simulated as a unit test in             ="
 echo "=  projects/brmsquickstart/helloworld-brms which you can run with the maven command:      ="
 echo "=                                                                                         =" 
-echo "=    $ mvn deploy -f projects/brmsquickstart/helloworld-brms/pom.xml                      ="
+echo "=    $ mvn clearn test -f projects/brmsquickstart/helloworld-brms/pom.xml                 ="
+echo "=                                     -s quickstartsettings.xml -Penable-test,brms        ="
 echo "=                                                                                         =" 
 echo "=  View the DV setup:                                                                     ="
 echo "=                                                                                         ="
-echo "=  Refer to the how to guide and videos for specific setup                                ="
+echo "=  Refer to the how to guide and videos for specific setup.                               ="
 echo "=                                                                                         ="
-echo "=   $DEMO Setup Complete.                                                                 ="
+echo "=   $DEMO Setup Complete.                                ="
 echo "=                                                                                         ="
 echo "==========================================================================================="
 echo
