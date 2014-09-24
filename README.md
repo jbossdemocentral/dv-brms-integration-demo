@@ -75,17 +75,17 @@ Data Driven Business Decisions Made easy.
 Supporting Articles
 -------------------
 
-![Part 1 Overview](http://vimeo.com/user16928011/dv-brms-integrated-demo-part1)
+[![Part 1 Overview](docs/demo-images/video1.png)](http://vimeo.com/user16928011/dv-brms-integrated-demo-part1)
 
-![Part 2 Configuration/Deploy](http://vimeo.com/user16928011/dv-brms-integrated-demo-part2)
+[![Part 2 Configuration/Deploy](docs/demo-images/video2.png)](http://vimeo.com/user16928011/dv-brms-integrated-demo-part2)
 
-![Part 3 Build/Deploy](http://vimeo.com/user16928011/dv-brms-integrated-demo-part3) 
+[![Part 3 Build/Deploy](docs/demo-images/video3.png)](http://vimeo.com/user16928011/dv-brms-integrated-demo-part3) 
 
-![Part 4 Run](http://vimeo.com/user16928011/dv-brms-integrated-demo-part4) 
+[![Part 4 Run](docs/demo-images/video4.png)](http://vimeo.com/user16928011/dv-brms-integrated-demo-part4) 
 
-![DV - Example of two federated datasources](https://developer.jboss.org/docs/DOC-18404)
+[DV - Example of two federated datasources](https://developer.jboss.org/docs/DOC-18404)
 
-![BRMS - A basic JBoss BRMS quickstart](http://www.jboss.org/quickstarts/brms/helloworld-brms) 
+[BRMS - A basic JBoss BRMS quickstart](http://www.jboss.org/quickstarts/brms/helloworld-brms) 
 
 
 Released versions
