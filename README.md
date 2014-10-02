@@ -35,7 +35,17 @@ Follow the instructions on the screen to start JBoss BRMS server and JBoss DV se
                                                                                        
    Build & Deploy JBoss BRMS project:
 
-     `Authoring` -> `Project Authoring` -> `Tools` -> `Project Editor` -> click on `Build & Deploy`.   
+    -Choose menu option `Authoring` -> `Project Authoring`  
+    -Choose the following options under `Project Explorer`:  
+        Organizational Unit:  example  
+        Repository Name:      jboss-brms-repository  
+        BRMS Kmodule:         helloworld-brms-kmodule  
+    -Next, click on `Tools` and `Project Editor`  
+    -In the tab on the right, click on `Build & Deploy`.   
+      * It will prompt you with a message: "Also save possible changes to project?". Click `Yes`.  
+      * You are prompted for a comment. Add a comment and click on `Save` button.  
+    -This deploys the `org.jboss.quickstarts.brms:helloworld-brms-kmodule:1.0.0` artifact to the BRMS Maven repository. You can verify the deployment choosing menu option `Deployment` --> `Artifact Repository`.  
+
 
    As a developer you have an application project simulated as a unit test in             
    projects/brmsquickstart/helloworld-brms which you can run with the maven command:      
