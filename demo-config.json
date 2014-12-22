@@ -1,13 +1,13 @@
 {
   "name":"Data Virtualization and Business Rules Management System Integration Demo",
   "summary":"This demo shows how to use a Virtual Database (VDB) with a BRMS Quickstart",
-  "author":"Kenneth Peeples",
+  "author":"Kenneth Peeples, Eric D. Schabell",
   "level":"Intermediate",
   "published":true,
   "prerequisites":"Java VM 1.6 or 1.7, Maven",
   "targetProduct":"JBoss Data Virtualization and JBoss BRMS",
   "productVersion":"JBoss DV 6.0 and JBoss BRMS 6.0.3",
-  "technologies": ["Drools","Teiid", "AS"],
+  "technologies": ["Rules","Events","Teiid","JBoss EAP","JBoss BRMS", "JBoss DV"],
   "links": [ 
     {
       "name":"Code",
