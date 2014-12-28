@@ -95,7 +95,7 @@ Released versions
 
 See the tagged releases for the following versions of the product:
 
-- v1.2 - JBoss BRMS 6.0.3, JBoss DV 6.0.0, and initial demo projects installed.
+- v1.2 - JBoss BRMS 6.0.3, JBoss DV 6.0.0, initial demo projects installed and improved windows init.bat installation.
 
 - v1.1 - JBoss BRMS 6.0.2, JBoss DV 6.0.0, and initial demo projects installed.
 
