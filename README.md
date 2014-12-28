@@ -16,7 +16,7 @@ Quickstart
 
 2. Add products to installs directory.
 
-3. Run 'init.sh' or 'init.bat'.
+3. Run 'init.sh' or 'init.bat' file. 'init.bat' must be run with Administrative privileges. 
 
 Follow the instructions on the screen to start JBoss BRMS server and JBoss DV server.
 

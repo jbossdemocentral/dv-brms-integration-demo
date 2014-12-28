@@ -84,17 +84,23 @@ echo Product installer running now...
 echo.
 call java -jar %SRC_DIR%\%DV% %SUPPORT_DIR%\installation-dv 
 
+if not "%ERRORLEVEL%" == "0" (
+	echo Error Occurred During DV Installation!
+	echo.
+	GOTO :EOF
+)
+
 move "%JBOSS_HOME%" "%JBOSS_HOME_DV%"
 
 echo.
 echo   - install teiid security files...
 echo.
-xcopy /Y /Q "%SUPPORT_DIR%\teiid*" "%SERVER_CONF_DV%"
+xcopy /Y /Q /S "%SUPPORT_DIR%\teiid*" "%SERVER_CONF_DV%"
 
 echo.
 echo   - move data files...
 echo.
-xcopy /Y /Q "%SUPPORT_DIR%\teiidfiles\data\*" "%JBOSS_HOME_DV%\standalone\data"
+xcopy /Y /Q /S "%SUPPORT_DIR%\teiidfiles\data\*" "%JBOSS_HOME_DV%\standalone\data"
 
 echo.
 echo   - move virtual database...
@@ -102,7 +108,7 @@ echo.
 xcopy /Y /Q "%SUPPORT_DIR%\teiidfiles\vdb" "%JBOSS_HOME_DV%\standalone\deployments"
 
 echo   - setting up dv standalone.xml configuration adjustments...
-echo
+echo.
 xcopy /Y /Q "%SUPPORT_DIR%\teiidfiles\standalone.dv.xml" "%SERVER_CONF_DV%\standalone.xml"
 
 REM Run BRMS installer.
@@ -110,10 +116,16 @@ echo Product installer running now...
 echo.
 call java -jar %SRC_DIR%\%BRMS% %SUPPORT_DIR%\installation-brms -variablefile %SUPPORT_DIR%\installation-brms.variables
 
+if not "%ERRORLEVEL%" == "0" (
+	echo Error Occurred During BRMS Installation!
+	echo.
+	GOTO :EOF
+)
+
 echo.
 echo   - setting up demo projects...
 echo.
-xcopy /Y /Q "%SUPPORT_DIR%\bpm-suite-demo-niogit" "%SERVER_BIN%\.niogit"
+xcopy /Y /Q /S "%SUPPORT_DIR%\bpm-suite-demo-niogit\*" "%SERVER_BIN%\.niogit\"
 
 echo.
 echo   - setting up roles adjustments...

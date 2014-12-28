@@ -78,6 +78,12 @@ echo Product installer running now...
 echo
 
 java -jar $SRC_DIR/$DV $SUPPORT_DIR/installation-dv 
+
+if [ $? -ne 0 ]; then
+	echo Error occurred during DV installation
+	exit
+fi
+
 mv $JBOSS_HOME $JBOSS_HOME_DV
 
 echo
@@ -103,6 +109,11 @@ cp $SUPPORT_DIR/teiidfiles/standalone.dv.xml $SERVER_CONF_DV/standalone.xml
 echo Product installer running now...
 echo
 java -jar $SRC_DIR/$BRMS $SUPPORT_DIR/installation-brms -variablefile $SUPPORT_DIR/installation-brms.variables
+
+if [ $? -ne 0 ]; then
+	echo Error occurred during BRMS installation
+	exit
+fi
 
 echo
 echo "  - setting up demo projects..."
