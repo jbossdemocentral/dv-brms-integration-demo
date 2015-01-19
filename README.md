@@ -67,7 +67,7 @@ The following steps can be used to configure and run the demo in a docker contai
 
 2. Add products to installs directory.
 
-3. Copy contents of support/docker directory to the project root.
+3. Copy Dockerfile and .dockerignore files in support/docker directory to the project root.
 
 4. Build demo image
 
