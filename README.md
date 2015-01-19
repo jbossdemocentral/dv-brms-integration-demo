@@ -59,28 +59,30 @@ Follow the instructions on the screen to start JBoss BRMS server and JBoss DV se
      See the How to guide for more detail.  
    ```
 
-Docker
---------------
+Optional Docker Install
+-----------------------
 The following steps can be used to configure and run the demo in a docker container
 
 1. [Download and unzip.](https://github.com/jbossdemocentral/brms-fuse-integration-demo/archive/master.zip).
 
 2. Add products to installs directory.
 
-3. Build demo image
+3. Copy contents of support/docker directory to the project root.
+
+4. Build demo image
 
 	```
 	docker build -t jbossdemocentral/dv-brms-integration-demo .
 	```
-4. Start demo container
+5. Start demo container
 
 	```
 	docker run --it -p 9990:9990 -p 9999:9999 -p 8080:8080 -p 31000:31000 -p 10090:10090 -p 10099:10099 -p 8180:8180 jbossdemocentral/dv-brms-integration-demo
 	```
 
-5. Login, build and deploy JBoss BPM Suite process project at http://<DOCKER_HOST>:8080/business-central (u:erics/p:bpmsuite1!).
+6. Login, build and deploy JBoss BPM Suite process project at http://<DOCKER_HOST>:8080/business-central (u:erics/p:bpmsuite1!).
 
-6. Login to business central to build & deploy BRMS rules project at:
+7. Login to business central to build & deploy BRMS rules project at:
 
      http://<DOCKER_HOST>:8180/business-central     (u:quickstartUser/p:quickstartPwd1!)                  
 
@@ -154,6 +156,8 @@ Released versions
 -----------------
 
 See the tagged releases for the following versions of the product:
+
+- v1.3 - JBoss BRMS 6.0.3, JBoss DV 6.0.0, optional docker installation added.
 
 - v1.2 - JBoss BRMS 6.0.3, JBoss DV 6.0.0, initial demo projects installed and improved windows init.bat installation.
 
