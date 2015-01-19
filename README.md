@@ -59,6 +59,66 @@ Follow the instructions on the screen to start JBoss BRMS server and JBoss DV se
      See the How to guide for more detail.  
    ```
 
+Docker
+--------------
+The following steps can be used to configure and run the demo in a docker container
+
+1. [Download and unzip.](https://github.com/jbossdemocentral/brms-fuse-integration-demo/archive/master.zip).
+
+2. Add products to installs directory.
+
+3. Build demo image
+
+	```
+	docker build -t jbossdemocentral/dv-brms-integration-demo .
+	```
+4. Start demo container
+
+	```
+	docker run --it -p 9990:9990 -p 9999:9999 -p 8080:8080 -p 31000:31000 -p 10090:10090 -p 10099:10099 -p 8180:8180 jbossdemocentral/dv-brms-integration-demo
+	```
+
+5. Login, build and deploy JBoss BPM Suite process project at http://<DOCKER_HOST>:8080/business-central (u:erics/p:bpmsuite1!).
+
+6. Login to business central to build & deploy BRMS rules project at:
+
+     http://<DOCKER_HOST>:8180/business-central     (u:quickstartUser/p:quickstartPwd1!)                  
+
+   Build & Deploy JBoss BRMS project:
+
+    -Choose menu option `Authoring` -> `Project Authoring`
+    -Choose the following options under `Project Explorer`:
+        Organizational Unit:  example
+        Repository Name:      jboss-brms-repository
+        BRMS Kmodule:         helloworld-brms-kmodule
+    -Next, click on `Tools` and `Project Editor`
+    -In the tab on the right, click on `Build & Deploy`.
+      * It will prompt you with a message: "Also save possible changes to project?". Click `Yes`.
+      * You are prompted for a comment. Add a comment and click on `Save` button.
+    -This deploys the `org.jboss.quickstarts.brms:helloworld-brms-kmodule:1.0.0` artifact to the BRMS Maven repository. You can verify the deployment choosing menu option `Deployment` --> `Artifact Repository`.
+
+
+   As a developer you have an application project simulated as a unit test in
+   projects/brmsquickstart/helloworld-brms. Modifications are required to update the location of the Teiid server (DV). Modify the HelloWorldBRMSTest.java file in the helloworld-brms project with the following:
+
+ 
+    String url = "jdbc:teiid:CustomerContextVDB@mm://<DOCKER_HOST>:31000";
+ 
+
+Run the unit test with the maven command:
+
+     $ mvn clean test -f projects/brmsquickstart/helloworld-brms/pom.xml -s support/quickstartsettings.xml -Penable-test,brms -Dbrms.host=<DOCKER_HOST>                        
+
+   View the Virtual Database Project:
+
+     Import the DV project into JBDS with the Teiid tools installed.
+
+     See the How to guide for more detail.
+  
+
+Additional information can be found in the jbossdemocentral docker [developer repository](https://github.com/jbossdemocentral/docker-developer)
+
+
 
 Use Case 1 
 ----------  

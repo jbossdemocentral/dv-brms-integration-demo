@@ -43,6 +43,7 @@
 
         <maven.compiler.target>1.6</maven.compiler.target>
         <maven.compiler.source>1.6</maven.compiler.source>
+        <brms.host>localhost</brms.host>
 
         <!-- The tests are skipped by Default because it fails without 'brms' profile -->
         <maven.test.skip>true</maven.test.skip>
@@ -131,7 +132,7 @@
                 <repository>
                     <id>brms-m2-repo</id>
                     <name>BRMS M2 Repo</name>
-                    <url>http://localhost:8180/business-central/maven2/</url>
+                    <url>http://${brms.host}:8180/business-central/maven2/</url>
                 </repository>
             </repositories>
 
