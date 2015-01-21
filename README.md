@@ -8,10 +8,11 @@ the capabilities of these two product.
 
 ![Architecture Overview](https://github.com/kpeeples/dv-brms-integration-demo/blob/master/docs/demo-images/dv%2Bbrms-image2.JPG)
 
+There are two options available to you for using this demo; local and Docker.
 
-Quickstart
-----------
 
+Option 1 - Install on your machine
+----------------------------------
 1. [Download and unzip.](https://github.com/kpeeples/dv-brms-integration-demo/archive/master.zip)
 
 2. Add products to installs directory.
@@ -59,8 +60,9 @@ Follow the instructions on the screen to start JBoss BRMS server and JBoss DV se
      See the How to guide for more detail.  
    ```
 
-Optional Docker Install
------------------------
+
+Option 2 - Generate docker install
+----------------------------------
 The following steps can be used to configure and run the demo in a docker container
 
 1. [Download and unzip.](https://github.com/jbossdemocentral/brms-fuse-integration-demo/archive/master.zip).
@@ -146,6 +148,7 @@ Data Driven Business Decisions Made easy.
 
 Supporting Articles
 -------------------
+[3 shockingly easy ways into JBoss rules, events, planning & BPM](http://www.schabell.org/2015/01/3-shockingly-easy-ways-into-jboss-brms-bpmsuite.html)
 
 [DV - Example of two federated datasources](https://developer.jboss.org/docs/DOC-18404)
 
@@ -154,7 +157,6 @@ Supporting Articles
 
 Released versions
 -----------------
-
 See the tagged releases for the following versions of the product:
 
 - v1.3 - JBoss BRMS 6.0.3, JBoss DV 6.0.0, optional docker installation added.
