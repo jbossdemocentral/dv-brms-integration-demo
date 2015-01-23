@@ -1,6 +1,6 @@
 #!/bin/sh 
 DEMO="JBoss BRMS & JBoss DV Integration Demo"
-AUTHORS="Kenny Peeples, Eric D. Schabell"
+AUTHORS="Andrew Block, Kenny Peeples, Eric D. Schabell"
 PROJECT="git@github.com:kpeeples/dv-brms-integration-demo.git"
 PRODUCT="JBoss BRMS & JBoss DV Integration Demo"
 JBOSS_HOME=./target/jboss-eap-6.1
@@ -35,7 +35,7 @@ echo "##     ####   #   #  #     #  ###        ####     #       ##"
 echo "##                                                        ##"   
 echo "##                                                        ##"   
 echo "##  brought to you by,                                    ##"   
-echo "##             ${AUTHORS}            ##"
+echo "##     ${AUTHORS}      ##"
 echo "##                                                        ##"   
 echo "##  ${PROJECT}  ##"
 echo "##                                                        ##"   

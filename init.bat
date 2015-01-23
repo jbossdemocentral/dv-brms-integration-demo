@@ -3,7 +3,7 @@ setlocal
 
 set PROJECT_HOME=%~dp0
 set DEMO=JBoss BRMS & JBoss DV Integration Demo
-set AUTHORS=Kenny Peeples, Eric D. Schabell
+set AUTHORS=Andrew Block, Kenny Peeples, Eric D. Schabell
 set PROJECT=git@github.com:kpeeples/dv-brms-integration-demo.git
 set PRODUCT=JBoss BRMS & JBoss DV Integration Demo
 set JBOSS_HOME=%PROJECT_HOME%target\jboss-eap-6.1
@@ -38,7 +38,7 @@ echo ##     ####   #   #  #     #  ###        ####     #       ##
 echo ##                                                        ##   
 echo ##                                                        ##   
 echo ##  brought to you by,                                    ##   
-echo ##             %AUTHORS%            ##
+echo ##     %AUTHORS%      ##
 echo ##                                                        ##   
 echo ##  %PROJECT%  ##
 echo ##                                                        ##   
