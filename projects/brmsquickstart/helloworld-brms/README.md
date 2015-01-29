@@ -70,7 +70,7 @@ Deploy BRMS kmodule
 
 4. Choose the following options under `Project Explorer`:
 
-        Organizational Unit:  example
+        Organizational Unit:  Demo
         Repository Name:      jboss-brms-repository
         BRMS Kmodule:         helloworld-brms-kmodule
 
