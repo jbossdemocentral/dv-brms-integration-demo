@@ -14,9 +14,10 @@ ENV DV_HOME /opt/jboss/dv
 ENV DV_VERSION_MAJOR 6
 ENV DV_VERSION_MINOR 0
 ENV DV_VERSION_MICRO 0
+ENV DV_RELEASE_CYCLE 4
 
 # ADD Installation Files
-COPY support/installation-brms support/installation-brms.variables support/installation-dv installs/jboss-brms-installer-$BRMS_VERSION_MAJOR.$BRMS_VERSION_MINOR.$BRMS_VERSION_MICRO.GA-redhat-1.jar installs/jboss-dv-installer-$DV_VERSION_MAJOR.$DV_VERSION_MINOR.$DV_VERSION_MICRO.GA-redhat-4.jar  /opt/jboss/
+COPY support/installation-brms support/installation-brms.variables support/installation-dv installs/jboss-brms-installer-$BRMS_VERSION_MAJOR.$BRMS_VERSION_MINOR.$BRMS_VERSION_MICRO.GA-redhat-1.jar installs/jboss-dv-installer-$DV_VERSION_MAJOR.$DV_VERSION_MINOR.$DV_VERSION_MICRO.GA-redhat-$DV_RELEASE_CYCLE.jar  /opt/jboss/
 
 # Configure project prerequisites and run installer and cleanup installation components
 RUN sed -i "s:<installpath>.*</installpath>:<installpath>$DV_HOME</installpath>:" /opt/jboss/installation-dv \
