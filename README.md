@@ -38,7 +38,7 @@ Follow the instructions on the screen to start JBoss BRMS server and JBoss DV se
 
     -Choose menu option `Authoring` -> `Project Authoring`  
     -Choose the following options under `Project Explorer`:  
-        Organizational Unit:  example  
+        Organizational Unit:  Demo  
         Repository Name:      jboss-brms-repository  
         BRMS Kmodule:         helloworld-brms-kmodule  
     -Next, click on `Tools` and `Project Editor`  
