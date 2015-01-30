@@ -55,9 +55,9 @@ Follow the instructions on the screen to start JBoss BRMS server and JBoss DV se
                                                                                        
    View the Virtual Database Project:                                                                     
                                                                                        
-     Import the DV project into JBDS with the Teiid tools installed.  
+     Import the DV project into JBDS with the Teiid tools installed so that you can use the Teiid Perspective for viewing.   
+     To import the DV Project in JBDS you click, File-->Import-->General-->Existing Projects into Workspace and Browse to the projects/dvworkspace/dvbrms directory in your working directory.  
 
-     See the How to guide for more detail.  
    ```
 
 
