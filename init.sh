@@ -1,6 +1,6 @@
 #!/bin/sh 
 DEMO="JBoss BRMS & JBoss DV Integration Demo"
-AUTHORS="Andrew Block, Kenny Peeples, Eric D. Schabell"
+AUTHORS="Andrew Block, Kenny Peeples"
 PROJECT="git@github.com:kpeeples/dv-brms-integration-demo.git"
 PRODUCT="JBoss BRMS & JBoss DV Integration Demo"
 JBOSS_HOME=./target/jboss-eap-6.1

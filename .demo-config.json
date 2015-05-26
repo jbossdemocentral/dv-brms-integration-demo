@@ -1,7 +1,7 @@
 {
   "name":"Data Virtualization and Business Rules Management System Integration Demo",
   "summary":"This demo shows how to use a Virtual Database (VDB) with a BRMS Quickstart",
-  "author":"Kenneth Peeples, Eric D. Schabell",
+  "author":"Andrew Block, Kenneth Peeples",
   "category":"dv",
   "categories":["dv","multi"],
   "level":"Intermediate",
