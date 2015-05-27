@@ -3,7 +3,7 @@
   "summary":"This demo shows how to use a Virtual Database (VDB) with a BRMS Quickstart",
   "author":"Andrew Block, Kenneth Peeples",
   "category":"dv",
-  "categories":["dv","multi"],
+  "categories":["dv","multi","brms"],
   "level":"Intermediate",
   "published":true,
   "prerequisites":"Java VM 1.6 or 1.7, Maven",
